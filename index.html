@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +8,57 @@
     <!-- box icons -->
     <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css">
     <!-- link css "loyiha yakunida output.css ulb qo'y !"-->
+    <!-- loader.css -->
+    <link rel="stylesheet" href="./stayls/loader.css">
+    <!-- modal.css -->
+    <link rel="stylesheet" href="./stayls/modal.css">
     <link rel="stylesheet" href="./stayls/index.css">
     <title>Upwork</title>
 </head>
-
 <body>
+      <!-- LOADER COMPONENT -->
+
+      <div class="load_wrapper">
+        <span class="loader"></span>
+    </div>
+
+
+    <!-- MODAL CONTENT -->
+
+
+    <div class="modal_wrapper">
+        <div class="modal_content">
+            <div class="modal_header">
+                 <span></span>  <span id="close"> <i class='bx bx-x text-4xl mt-2 mr-2'></i></span>
+            </div>
+
+            <div class="modal_body py-6">
+
+              <h3 class="text-center modal_title text-green-600 text-2xl"> Login in </h3>
+              <form action="#" class="mx-auto w-[60%] py-5">
+                <label for="username" class="block mb-4">
+                    <input class="py-3  border border-gray-600 px-4 rounded-sm" type="text " id="username" placeholder="Enter user name">
+                </label>
+                <label for="password" class="block">
+                    <input class="py-3  border border-gray-600 px-4 rounded-sm" type="password" id="password" placeholder="Enter user name">
+                </label>
+                
+              </form>
+              <button class="bg-green-500 modal_submit px-3 py-2 text-white block mx-auto my-4">
+                submit
+            </button>
+            </div>
+
+            <div class="modal_footer">
+
+            </div>
+        </div>
+    </div>
+
     <!-- header start -->
     <header>
         <nav class="py-5 border-b-[1px] border-solid  border-[#EFF2EF]  ">
-            <div class="container mx-auto px-4 w-[1312px] flex items-center justify-between ">
+            <div class="container mx-auto px-4 w-[1312px] flex items-center justify-between gap-3 rounded-md ">
                 <img src="./assets/imges/logo.png" alt="logo">
                 <ul class="flex items-center gap-3 ">
                     <li>
@@ -54,7 +95,7 @@
                         </p>
                     </div>
                     <div class="flex items-center gap-4">
-                        <button
+                        <button id="login"
                             class="py-3 px-5 text-[#2D432C] text-[16px] font-medium bg-transparent rounded-[45px] duration-300 hover:cursor-pointer hover:text-white hover:bg-[#0E8B00] hover:duration-300">Log
                             In</button>
                         <button
@@ -594,5 +635,5 @@
     </footer>
     <!-- footer start -->
 </body>
-
+<script src="./script.js"></script>
 </html>
